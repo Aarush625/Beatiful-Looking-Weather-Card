@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.weather_card{
+    height: 80vh;
+    width: 20vw;
+    background-color: #ffbb4b;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.weather_card:hover .layer_2{
+    transform: scale(1);
+}
+.weather_card:hover .layer_1{
+    transform: scale(1);
+}
+.weather_card:hover .sun{
+    transform: scale(1);
+}
+@keyframes updown {
+    0%{
+        height: 115px;
+        width: 115px;
+    }
+    80%{
+        height: 100px;
+        width: 100px;
+    }
+    100%{
+        height: 110px;
+        width: 110px;
+    }
+}
+.sun{
+    transform: scale(0);
+    height: 125px;
+    width: 125px;
+    background-color: #f9ee8d1e;
+    border-radius: 50%;
+    position: absolute;
+    right: 1vw;
+    transition: 800ms;
+    top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layer_1{
+    animation: updown 4s ease infinite;
+    transform: scale(0);
+    transition: 500ms;
+    height: 100px;
+    width: 100px;
+    background-color: #f9ee8d49;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.layer_2{
+    transform: scale(0);
+    height: 72px;
+    width: 72px;
+    background-color: #f9ee8d;
+    border-radius: 50%;
+    transition: 300ms;
+}
+.weather_card:hover .mountain_layer1{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer1{
+    transition: 300ms;
+    background-color: #ff9f08;
+    height: 40vh;
+    width: 4vw;
+    border-radius: 100px 100px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 25vh;
+    right: 0;
+}
+.weather_card:hover .mountain_layer2{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer2{
+    background-color: #ff9f08;
+    height: 60vh;
+    width: 4vw;
+    transition: 400ms;
+    border-radius: 100px 100px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 18vh;
+    right: 3vw;
+}
+.weather_card:hover .mountain_layer3{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer3{
+    background-color: #ff9f08;
+    height: 80vh;
+    width: 4vw;
+    transition: 500ms;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 10vh;
+    right: 5vw;
+}
+.weather_card:hover .mountain_layer4{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer4{
+    background-color: #ff9007;
+    height: 80vh;
+    width: 4vw;
+    transition: 600ms;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 16vh;
+    right: 2vw;
+}
+.weather_card:hover .mountain_layer5{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer5{
+    background-color: #ff9007;
+    height: 120vh;
+    width: 4vw;
+    transition: 700ms;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 7vh;
+    right: 2vw;
+}
+.weather_card:hover .mountain_layer6{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer6{
+    background-color: #f2781a;
+    height: 80vh;
+    width: 4vw;
+    transition: 800ms;
+    border-radius: 10px 20px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 29vh;
+    right: 1vw;
+}
+.weather_card:hover .mountain_layer7{
+    transform: rotate(-40deg) translateX(0vh) translateZ(0vw);
+}
+.mountain_layer7{
+    background-color: #f2781a;
+    height: 120vh;
+    width: 14vw;
+    transition: 900ms;
+    border-radius: 5px 7px 0px 0px;
+    position: absolute;
+    transform: rotate(-40deg) translateX(-100vh) translateZ(-100vh);
+    top: 20vh;
+    right: 0vw;
+}
+.weather_card:hover .pine_tree_base_bg{
+    transform: translateX(0) translateY(0);
+}
+.pine_tree_base_bg{
+    transform: translateX(-20vw) translateY(20vh);
+    height: 350px;
+    width: 350px;
+    transition: 900ms;
+    border-radius: 50%;
+    background-color: #983e0d;
+    position: absolute;
+    top: 45vh;
+    right: 8vw;
+    z-index: 50;
+}
+.weather_card:hover .pine_tree{
+    transform: translateX(0) translateY(0);
+}
+.pine_tree{
+    transform: translateX(-20vw) translateY(20vh);
+    position: absolute;
+    height: 80px;
+    top: 36.5vh;
+    left: 0.9vw;
+    opacity: .2;
+    transition: 1000ms;
+}
+.weather_card:hover .pine_tree_base{
+    transform: translateX(0) translateY(0vh);
+}
+.pine_tree_base{
+    transform: translateX(0) translateY(50vh);
+    background-color: #5f2c2f;
+    height: 1000px;
+    width: 1000px;
+    transition: 1100ms;
+    border-radius: 50%;
+    position: absolute;
+    top: 44vh;
+    right: -30vw;
+    z-index: 100;
+}
+.weather_card:hover .pine_tree_1{
+    transform: translateX(0) translateY(0vh);
+}
+.weather_card:hover .pine_tree_2{
+    transform: translateX(0) translateY(0vh);
+}
+.pine_tree_1{
+    transform: translateX(0) translateY(50vh);
+    position: absolute;
+    height: 100px;
+    transition: 1300ms;
+    top: 32vh;
+    right: 0.2vw;
+    opacity: 0.8;
+}
+.pine_tree_2{
+    transform: translateX(0) translateY(50vh);
+    height: 90px;
+    position: absolute;
+    transition: 1200ms;
+    top: 35vh;
+    right: 5.5vw;
+    opacity: 0.7;
+}
+.weather_card:hover .weather{
+    transform: translateY(0vh);
+}
+.weather_card:hover .degree{
+    transform: translateY(0vh);
+}
+.weather{
+    transform: translateY(-40vh);
+    color: #fffefe;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 1px;
+    position: absolute;
+    transition: 600ms;
+    top: 13vh;
+    left: 1.1vw;
+    font-size: 1.4rem;
+}
+.degree{
+    transform: translateY(-40vh);
+    color: #fffefe;
+    transition: 500ms;
+    font-family: 'Changa', sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    top: 13vh;
+    left: 1vw;
+    z-index: 111;
+}
+.weather_card:hover h3{
+    transform: translateY(0vh);
+}
+h3{
+    transform: translateY(40vh);
+    transition: 1300ms;
+    font-family: 'Sarpanch', sans-serif;
+    color: #fffefe;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 112;
+    top: 53vh;
+    left: 2vw;
+    letter-spacing: 5px;
+}
+.weather_card:hover .weather_info{
+    transform: translateY(0vh);
+}
+.weather_info{
+    transform: translateY(50vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1500ms;
+    width: 25vw;
+    position: absolute;
+    z-index: 200;
+    top: 60vh;
+    left: -18px;
+}
+.weather_{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 63vh;
+    margin-right: 2rem;
+    z-index: 200;
+}
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap');
+.weather_ h1{
+    font-size: .8rem;
+    margin-left: .2rem;
+    color: #a27d7a;
+    font-family: 'Changa', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 100;
+
+}
+.weather_ h2{
+    font-size: 1.1rem;
+    margin-left: .6rem;
+    color: #fffefe;
+    letter-spacing: 0px;
+    font-family: 'Roboto Mono', monospace;
+}
